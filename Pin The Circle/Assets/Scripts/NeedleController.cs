@@ -50,7 +50,9 @@ public class NeedleController : MonoBehaviour {
         {
             _isNeedleFired = false;
             _circleTouched = true;
-            _needleRigidBody.isKinematic = false;
+            _needleRigidBody.isKinematic = true;
+            _needleRigidBody.simulated = false;
+            gameObject.transform.SetParent(target.transform);
         }
 
     }
